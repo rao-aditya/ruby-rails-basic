@@ -1,3 +1,4 @@
+# Serialization class for a ToDo Resource
 class TodoSerializer < ActiveModel::Serializer
   attributes :id, :title, :completed, :order
   attribute :url do
