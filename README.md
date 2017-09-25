@@ -131,26 +131,6 @@ This app uses [`PostgreSQL`](https://www.postgresql.org/) as it's database, and 
 
 Copy the new application name for use later.
 
-### Get Your Heroku API key
-1. Click on your avatar in the upper right, then click `Account Settings`
-2. Near the bottom, you will find `API key`. Click the `Reveal` button
-3. Copy the API key
-4. In the project files on your local machine, open `deployment.env.sample` and change `your_api_key_here` to your api key without any qutes.
-13. Rename `deployment.env.sample` to `deployment.env`
-
-### Create encrypted files
-
-In a previous step, you should have created the `codeship.aes` file. This encryption key can be used to encrypt sensitive data so it can be safely committed.
-
-In this step, we will be encrypting the Heroku api key file you just created.
-
-1. In your terminal, navigate to your project's root folder.
-2. Ensure the `codeship.aes` and `deployment.env` files.
-3. Run the command `jet encrypt deployment.env deployment.env.encrypted`
-
-This will encrypt the file with your api key from Heroku. the unencrypted `deployment.env`, and `codeship.aes` key are both in the .gitignore file and will not be commited to the repository.
-
-
 ### Commit changes and push
 
 At this point, you have everything you need to test and deploy the project.
