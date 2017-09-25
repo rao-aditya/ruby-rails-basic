@@ -1,18 +1,18 @@
 # Codeship Pro Ruby on Rails Example
 
-[ ![Codeship Status for codeship-library/ruby-rails-todoapp](https://app.codeship.com/projects/97346e20-f1fa-0134-23f8-2e8f61e6642c/status?branch=master)](https://app.codeship.com/projects/209553)
+[ ![Codeship Status for hiimtaylorjones/ruby-rails-todoapp](https://app.codeship.com/projects/701b6330-4d88-0135-b9df-5629e6f4de9d/status?branch=master)](https://app.codeship.com/projects/233255)
 
 ## Overview
 The following repository is a `todo` API example developed with Ruby on Rails framework.
 
 This repo serves two main goals:
 
-1. Example application using [Codeship Pro]()
+1. Example application using [Codeship Basic](https://codeship.com/features/basic)
 2. A [Todo Backend](http://todobackend.com/) community project.  
 
-The following `README` is a guide to build and deploy with Codeship Pro You will also be able to run this project locally, and use it as a starter app for Ruby on Rails Docker projects.
+The following `README` is a guide to build and deploy with Codeship Basic. You will also be able to run this project locally, and use it as a starter app for Ruby on Rails Docker projects.
 
-Be sure to star/watch this repo to stay up-to-date with any changes. If you have any questions or suggestions regarding this example , please submit an [issue here](https://github.com/codeship-library/ruby-rails-todoapp/issues/new).
+Be sure to star/watch this repo to stay up-to-date with any changes. If you have any questions or suggestions regarding this example , please submit an [issue here](https://github.com/hiimtaylorjones/ruby-rails-todoapp/issues/new).
 
 ## Getting Started
 
@@ -26,10 +26,7 @@ There are a few resources to make sure you have available during this guide.
   + You must be an admin for the repo
 3. [Codeship](https://app.codeship.com/registrations/new) Account - CI/CD service
   + You can signup using any of the 3rd party logins or email/password
-4. [Codeship Jet CLI](https://documentation.codeship.com/pro/getting-started/installation/#installing-jet) - CLI tool for testing builds locally
-  + This can also be installed with `brew cask install jet`
-
-5. [Heroku](https://signup.heroku.com/) Account - App hosting
+4. [Heroku](https://signup.heroku.com/) Account - App hosting
 
 Signup for each of these is free, and should only take you a few minutes if you don't already have one.  You can use your current accounts if you already have one available.
 
@@ -78,22 +75,12 @@ Now that your repository is setup, the next step is to create the project in Cod
  + if you originally signed up with an SCM different than above, we will connect to the service during this step
 4. `Choose Your Repository`: Copy/Paste the Repository Clone URL link from previous step
 5. Click the `Connect` button
-6. `Configure Project`: Click the `Select Pro Project` button
+6. `Configure Project`: Click the `Select Basic Project` button
   + The setup instructions displayed can be ignored for now, but will be here to remind you in the future
 
 Your project is set up at this time, and any code commited and pushed to the repository will now run builds automatically, based on our current setup.
 
 > Note: The current setup will attempt to deploy on master, which will fail until we set these up.  We will test the build locally without the deployment first.
-
-### Download Codeship encryption key
-
-While you are in the Codeship project, there is an encryption key you will be using for other steps that can be downloaded now. The encryption key can be used to encrypt sensitive data so it can be safely committed.
-
-1. In project settings, click `General` in the left menu
-2. Download the `AES key`, and move it to your project's root folder
-3. Rename the file to `codeship.aes`
-
-> Alternatively, you can create the file `codeship.aes` and copy paste the key directly into that file.
 
 ### Test locally with Jet CLI
 
@@ -181,5 +168,3 @@ To simplify the deployment to Heroku, Codeship provides a Docker image called [`
 When complete and the build is green, you should now be able to navigate to the app with the Heroku provided url `yourappname.herokuapp.com`.
 
 If you run into trouble at any point, please submit an [issue here](https://github.com/codeship-library/ruby-rails-todoapp/issues/new).
-
-
