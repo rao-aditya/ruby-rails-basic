@@ -1,4 +1,4 @@
-# Codeship Pro Ruby on Rails Example
+# Codeship Basic Ruby on Rails Example
 
 [ ![Codeship Status for hiimtaylorjones/ruby-rails-todoapp](https://app.codeship.com/projects/701b6330-4d88-0135-b9df-5629e6f4de9d/status?branch=master)](https://app.codeship.com/projects/233255)
 
@@ -81,34 +81,6 @@ Now that your repository is setup, the next step is to create the project in Cod
 Your project is set up at this time, and any code commited and pushed to the repository will now run builds automatically, based on our current setup.
 
 > Note: The current setup will attempt to deploy on master, which will fail until we set these up.  We will test the build locally without the deployment first.
-
-### Test locally with Jet CLI
-
-In the first part of this tutorial, you should have installed the `Jet CLI`.  If not, make sure you do that now.  If you run `jet` in your terminal you should see the following output
-
-```
-Usage:
-  jet [command]
-....
-```
-
-If everything is working properly, you can now test the build.
-
-1. Run `jet steps`
-  + The output is exactly what you will see in Codeship
-2. After the build runs, you should end up with the following output in your terminal:
-
-```
-...
-...
-{StepFinished=step_name:"tests" type:STEP_FINISHED_TYPE_SUCCESS}
-{StepFinished=step_name:"deploy" type:STEP_FINISHED_TYPE_SKIPPED}
-```
-At this point, this build will work in Codeship. The deploy step was skipped because the local build was not tagged.  If you run `jet steps --tag master` you would see the build process start immediately following. This will fail because there are a couple more steps to finalize.
-
-Let's move on and do that now.
-
-> If you want to avoid running the deployment step and push the current code into your repository, you can create a new branch. This will bypass the deployment in Codeship and only run the build.
 
 ## Continuous Deployment to Heroku with Codeship
 
